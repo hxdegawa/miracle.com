@@ -1,0 +1,35 @@
+{
+  "name": "miracle.com",
+  "version": "1.0.0",
+  "description": "Fashion designer Hiromi&#39;s Web page",
+  "author": "Hiro Degawa",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
+  },
+  "dependencies": {
+    "@nuxtjs/pwa": "^3.0.0-0",
+    "nuxt": "^2.0.0",
+    "particles.js": "^2.0.0",
+    "vue-carousel": "^0.18.0",
+    "vue-tilt.js": "^1.0.2"
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-config": "^1.0.1",
+    "@nuxtjs/eslint-module": "^1.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^6.1.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-nuxt": ">=0.4.2",
+    "eslint-plugin-prettier": "^3.0.1",
+    "node-sass": "^4.12.0",
+    "prettier": "^1.16.4",
+    "pug": "^2.0.4",
+    "pug-plain-loader": "^1.0.0",
+    "sass-loader": "^7.3.1"
+  }
+}

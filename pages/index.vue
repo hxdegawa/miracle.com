@@ -23,6 +23,18 @@
 
       Loader(:scrollData="scrollData")
     section.screen-4(:class="{active: pageNumber === 3}")
+      .sns-wrapper
+        .col-1-3
+          a(href="https://miraclecom.thebase.in/")
+            img(src="~assets/images/base.svg").item-sns.base
+        .col-1-3
+          a(href="https://twitter.com/min_3h")
+            img(src="~assets/images/twitter.svg").item-sns.twitter
+        .col-1-3
+          a(href="https://www.instagram.com/hiromin.comm/")
+            img(src="~assets/images/instagram.svg").item-sns.instagram
+      Loader(:scrollData="scrollData")
+    section.screen-5(:class="{active: pageNumber === 4}")
       Loader(:scrollData="scrollData")
 </template>
 
@@ -86,7 +98,7 @@ export default {
 
 <style lang="scss">
 body {
-  height: 400vh;
+  height: 500vh;
 }
 
 section {
@@ -119,24 +131,97 @@ section {
     }
     &.screen-3 {
       background-color: #f9f8f7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
       .carousel {
         position: absolute;
         left: calc(50% - 40%);
         top: calc(50% - 40%);
         width: 80%;
+        height: 80%;
         user-select: none;
 
+        @media screen and (max-width: 960px) {
+          height: 100%;
+          width: 100%;
+          left: 0;
+          top: 0;
+        }
+
+        .VueCarousel-wrapper {
+          height: 100%;
+        }
+
+        .VueCarousel-inner {
+          height: 100% !important;
+        }
+
         .VueCarousel-slide {
+          max-height: 100%;
+
           img {
             width: 100%;
+            height: 100%;
             object-fit: cover;
           }
+
+          &:first-child {
+            img {
+              object-position: -200px;
+            }
+          }
+        }
+
+        .VueCarousel-pagination {
+          position: absolute;
+          bottom: 20px;
         }
       }
     }
     &.screen-4 {
-      background-color: #7158e2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f9e2fc;
+
+      .sns-wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        max-width: 1280px;
+
+        .col-1-3 {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          max-width: 240px;
+          height: 240px;
+          box-sizing: border-box;
+          padding: 40px;
+          background-color: #fafafa;
+          border-radius: 1000px;
+
+          &:first-child {
+            margin-right: 60px;
+          }
+
+          &:last-child {
+            margin-left: 60px;
+          }
+
+          a {
+            display: block;
+            width: 60%;
+
+            .item-sns {
+              width: 100%;
+              object-fit: contain;
+            }
+          }
+        }
+      }
     }
   }
 

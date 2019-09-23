@@ -2,8 +2,8 @@
   .container
     img(src="/backlogo.svg").backlogo
     .texts
-      p Miracleを世界に発信
-      p あなたに奇跡が起きますように・・・
+      img(src="~assets/images/catch1.svg")
+      img(src="~assets/images/catch2.svg")
 
 </template>
 
@@ -21,19 +21,32 @@
     max-width: 400px;
     object-fit: contain;
     user-select: none;
+    opacity: 0.4;
+
+    @media screen and (max-width: 400px) {
+      max-width: 90%;
+    }
   }
 
   .texts {
     position: absolute;
-    max-width: 80%;
+    width: 90%;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
 
-    p {
+    img {
+      display: block;
       text-align: center;
       color: #e7b5f2;
       font-size: 3.5rem;
+      max-width: 100%;
+      object-fit: contain;
+      margin: 0 auto;
+
+      &:last-child {
+        margin: 30px auto 0 auto;
+      }
     }
   }
 }

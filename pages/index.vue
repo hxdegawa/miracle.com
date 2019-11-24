@@ -4,9 +4,6 @@
       Logo
       Loader(:scrollData="scrollData" :backgroundColor="'#fea47f'" )
     section.screen-2(:class="{active: pageNumber === 1}")
-      BackLogo
-      Loader(:scrollData="scrollData" :backgroundColor="'#ffb8f1'")
-    section.screen-3(:class="{active: pageNumber === 2}")
       carousel(:perPage="1").carousel
         slide
           img(src="~assets/images/IMG_0098.JPG")
@@ -21,20 +18,28 @@
         slide
           img(src="~assets/images/IMG_0115.JPG")
 
-      Loader(:scrollData="scrollData")
-    section.screen-4(:class="{active: pageNumber === 3}")
+      Loader(:scrollData="scrollData" :backgroundColor="'#ff8ba7'")
+    section.screen-3(:class="{active: pageNumber === 2}")
+      span(class="sns-title") SNSとか
       .sns-wrapper
-        .col-1-3
-          a(href="https://miraclecom.thebase.in/")
-            img(src="~assets/images/base.svg").item-sns.base
-        .col-1-3
-          a(href="https://twitter.com/min_3h")
-            img(src="~assets/images/twitter.svg").item-sns.twitter
-        .col-1-3
-          a(href="https://www.instagram.com/hiromin.comm/")
-            img(src="~assets/images/instagram.svg").item-sns.instagram
-      Loader(:scrollData="scrollData")
-    section.screen-5(:class="{active: pageNumber === 4}")
+        .col-1-2
+          .flex-wrapper
+            a(href="https://miraclecom.thebase.in/")
+              img(src="~assets/images/base.svg").item-sns.base
+        .col-1-2
+          .flex-wrapper
+            a(href="https://twitter.com/min_3h")
+              img(src="~assets/images/twitter.svg").item-sns.twitter
+        .col-1-2
+          .flex-wrapper
+            a(href="https://www.instagram.com/miracle.com_/")
+              img(src="~assets/images/instagram.svg").item-sns.instagram
+        .col-1-2
+          .flex-wrapper
+            a(href="https://www.youtube.com/channel/UC1MybMmvX_RrPdyXNNN7LGw")
+              img(src="~assets/images/youtube.svg").item-sns.instagram
+      Loader(:scrollData="scrollData" :backgroundColor="'#f54291'")
+    section.screen-4(:class="{active: pageNumber === 3}")
       Loader(:scrollData="scrollData")
 </template>
 
@@ -98,7 +103,7 @@ export default {
 
 <style lang="scss">
 body {
-  height: 500vh;
+  height: calc(400vh - 1px);
 }
 
 section {
@@ -113,7 +118,7 @@ section {
 
   &[class*='screen-'] {
     &.screen-1 {
-      background-color: #ffcccc;
+      background-color: #f0c7d6;
 
       & > canvas {
         position: absolute;
@@ -124,13 +129,8 @@ section {
         pointer-events: none;
       }
     }
-
     &.screen-2 {
-      background-color: #f9e0fd;
-      font-family: 'nikumaru';
-    }
-    &.screen-3 {
-      background-color: #f9f8f7;
+      background-color: #ffe6eb;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -180,45 +180,72 @@ section {
         }
       }
     }
-    &.screen-4 {
+    &.screen-3 {
       display: flex;
       justify-content: center;
       align-items: center;
       background-color: #f9e2fc;
 
+      .sns-title {
+        position: absolute;
+        top: 120px;
+        left: 50%;
+        width: 100%;
+        text-align: center;
+        transform: translateX(-50%);
+        font-family: 'nikumaru';
+        color: #fafafa;
+        font-size: 50px;
+        letter-spacing: 2px;
+        filter: drop-shadow(2px 2px 0px #f54291);
+
+        @media screen and (max-width: 640px) {
+          font-size: 40px;
+          top: 60px;
+        }
+      }
+
       .sns-wrapper {
-        display: flex;
-        justify-content: space-between;
+        display: block;
         margin: 0 auto;
-        max-width: 1280px;
+        width: 480px;
 
-        .col-1-3 {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          max-width: 240px;
-          height: 240px;
-          box-sizing: border-box;
-          padding: 40px;
+        .col-1-2 {
+          display: inline-block;
+          height: 200px;
+          width: 200px;
+          vertical-align: top;
           background-color: #fafafa;
-          border-radius: 1000px;
+          border-radius: 30px;
+          margin: 20px;
 
-          &:first-child {
-            margin-right: 60px;
-          }
+          .flex-wrapper {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-          &:last-child {
-            margin-left: 60px;
-          }
+            a {
+              display: block;
+              width: 60%;
 
-          a {
-            display: block;
-            width: 60%;
-
-            .item-sns {
-              width: 100%;
-              object-fit: contain;
+              .item-sns {
+                width: 100%;
+                object-fit: contain;
+              }
             }
+          }
+        }
+
+        @media screen and (max-width: 640px) {
+          width: 300px;
+          margin: 50px 0 0 0;
+
+          .col-1-2 {
+            width: 130px;
+            height: 130px;
+            margin: 10px;
           }
         }
       }

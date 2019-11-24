@@ -37,6 +37,10 @@ export default {
   .logo {
     min-width: 500px;
     object-fit: contain;
+
+    @media screen and (max-width: 640px) {
+      min-width: 300px;
+    }
   }
 }
 </style>

@@ -139,7 +139,7 @@ section {
 
   &[class*='screen-'] {
     &.screen-1 {
-      background-color: #ffe5fc;
+      background-color: #f8ebf4;
 
       & > canvas {
         position: absolute;

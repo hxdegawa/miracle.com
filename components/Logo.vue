@@ -1,6 +1,6 @@
 <template lang="pug">
   .logo-wrapper
-    img(src="/logo.svg" v-tilt).logo
+    img(src="/logo2.svg" v-tilt).logo
 </template>
 
 <script>

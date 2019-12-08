@@ -28,7 +28,7 @@
               img(src="~assets/images/base.svg").item-sns.base
         .col-1-2
           .flex-wrapper
-            a(href="https://twitter.com/min_3h")
+            a(href="https://twitter.com/miracle_com_")
               img(src="~assets/images/twitter.svg").item-sns.twitter
         .col-1-2
           .flex-wrapper

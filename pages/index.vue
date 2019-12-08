@@ -49,7 +49,6 @@
           .name
             span ひろみん.com
           .contents
-            p ひろみん.com
             p フリーファッションクリエーター
             p 2018年 名古屋モード学園ファッションデザイン学科卒業
             p 2016年 みらくる.com 始動
@@ -59,7 +58,10 @@
               span こじん
 
             a(href="https://www.instagram.com/min.costume/")
-              span つくったやつ
+              span つくったの
+
+            a(href="mailto:mmiraclecomm@gmail.com")
+              span おといあわせ
 
 </template>
 
@@ -355,7 +357,6 @@ section {
             padding: 10px 20px 40px 20px;
 
             a {
-              width: calc(50% - 10px);
               display: inline-block;
               text-align: center;
               background-color: #ffffff;
@@ -372,12 +373,19 @@ section {
                 font-weight: 600;
               }
 
-              &:first-child {
+              &:nth-child(1) {
                 margin-right: 10px;
+                width: calc(50% - 10px);
               }
 
-              &:last-child {
+              &:nth-child(2) {
                 margin-left: 10px;
+                width: calc(50% - 10px);
+              }
+
+              &:nth-child(3) {
+                margin-top: 20px;
+                width: 100%;
               }
             }
           }

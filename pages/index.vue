@@ -20,7 +20,6 @@
 
       Loader(:scrollData="scrollData" :backgroundColor="'#ff8ba7'")
     section.screen-3(:class="{active: pageNumber === 2}")
-      span(class="sns-title") SNSとか
       .sns-wrapper
         .col-1-2
           .flex-wrapper
@@ -207,25 +206,6 @@ section {
       justify-content: center;
       align-items: center;
       background-color: #f9e2fc;
-
-      .sns-title {
-        position: absolute;
-        top: 120px;
-        left: 50%;
-        width: 100%;
-        text-align: center;
-        transform: translateX(-50%);
-        font-family: 'nikumaru';
-        color: #fafafa;
-        font-size: 50px;
-        letter-spacing: 2px;
-        filter: drop-shadow(2px 2px 0px #f54291);
-
-        @media screen and (max-width: 640px) {
-          font-size: 40px;
-          top: 60px;
-        }
-      }
 
       .sns-wrapper {
         display: block;

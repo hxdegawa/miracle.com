@@ -2,7 +2,7 @@
   .container(@scroll="pagify($event)")
     section.screen-1#particles(:class="{active: pageNumber === 0}")
       Logo
-      Loader(:scrollData="scrollData" :backgroundColor="'#fea47f'" )
+      Loader(:scrollData="scrollData" :backgroundColor="'#FFD0D7'" )
     section.screen-2(:class="{active: pageNumber === 1}")
       carousel(:perPage="1").carousel
         slide
@@ -140,7 +140,7 @@ section {
 
   &[class*='screen-'] {
     &.screen-1 {
-      background-color: #f0c7d6;
+      background-color: #ffe5fc;
 
       & > canvas {
         position: absolute;

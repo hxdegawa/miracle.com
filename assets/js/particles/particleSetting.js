@@ -2,7 +2,7 @@ export default {
   data: {
     particles: {
       number: {
-        value: 400,
+        value: 200,
         density: {
           enable: false
         }
@@ -11,7 +11,7 @@ export default {
         value: '#ffffff'
       },
       shape: {
-        type: ['circle', 'triangle'],
+        type: ['circle'],
         stroke: {
           width: 0,
           color: '#fafafa'

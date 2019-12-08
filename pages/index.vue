@@ -40,7 +40,27 @@
               img(src="~assets/images/youtube.svg").item-sns.instagram
       Loader(:scrollData="scrollData" :backgroundColor="'#f54291'")
     section.screen-4(:class="{active: pageNumber === 3}")
-      Loader(:scrollData="scrollData")
+      .profile-wrapper
+        .profile-card
+          .header
+            img(src="~/assets/images/header.jpg")
+          .icon
+            img(src="~/assets/images/profile.jpg")
+          .name
+            span ひろみん.com
+          .contents
+            p ひろみん.com
+            p フリーファッションクリエーター
+            p 2018年 名古屋モード学園ファッションデザイン学科卒業
+            p 2016年 みらくる.com 始動
+            p アイドル衣装製作、コンセプトカフェの制服デザイン製作などを手がける
+          .links
+            a(href="https://www.instagram.com/hiromin.comm/")
+              span こじん
+
+            a(href="https://www.instagram.com/min.costume/")
+              span つくったやつ
+
 </template>
 
 <script>
@@ -103,7 +123,7 @@ export default {
 
 <style lang="scss">
 body {
-  height: calc(400vh - 1px);
+  height: calc(400vh + 1px);
 }
 
 section {
@@ -246,6 +266,120 @@ section {
             width: 130px;
             height: 130px;
             margin: 10px;
+          }
+        }
+      }
+    }
+
+    &.screen-4 {
+      border: none;
+
+      .profile-wrapper {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .profile-card {
+          position: relative;
+          max-width: 400px;
+          border-radius: 20px;
+          overflow: hidden;
+          background-color: #ffffff;
+          filter: drop-shadow(2px 2px 10px #cecece);
+
+          @media screen and (max-width: 640px) {
+            max-width: 350px;
+          }
+
+          .header {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+
+            img {
+              object-fit: cover;
+              object-position: center;
+              width: 100%;
+              height: 100%;
+            }
+          }
+
+          .icon {
+            position: absolute;
+            box-sizing: border-box;
+            left: 30px;
+            top: calc(200px - 80px / 2);
+            height: 80px;
+            width: 80px;
+            border-radius: calc(80px / 2);
+            border: solid 2px #ffffff;
+            filter: drop-shadow(0px 0px 10px #cecece);
+
+            img {
+              object-fit: cover;
+              width: 100%;
+              height: 100%;
+              border-radius: calc(80px / 2);
+            }
+          }
+
+          .name {
+            box-sizing: border-box;
+            padding: 50px 15px 0px 15px;
+            letter-spacing: 1px;
+            font-weight: 600;
+            font-size: 16px;
+          }
+
+          .contents {
+            box-sizing: border-box;
+            padding: 20px;
+
+            p {
+              margin: 0px 0px 8px 0px;
+              white-space: pre-wrap;
+              letter-spacing: 1px;
+              font-size: 12px;
+              font-weight: 500;
+              color: #555;
+            }
+          }
+
+          .links {
+            box-sizing: border-box;
+            padding: 10px 20px 40px 20px;
+
+            a {
+              width: calc(50% - 10px);
+              display: inline-block;
+              text-align: center;
+              background-color: #ffffff;
+              text-decoration: none;
+              padding: 7px 0;
+              color: #000000;
+              border-radius: 5px;
+              line-height: 20px;
+              filter: drop-shadow(2px 2px 5px #cecece);
+
+              span {
+                font-size: 14px;
+                letter-spacing: 1px;
+                font-weight: 600;
+              }
+
+              &:first-child {
+                margin-right: 10px;
+              }
+
+              &:last-child {
+                margin-left: 10px;
+              }
+            }
           }
         }
       }

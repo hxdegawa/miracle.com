@@ -46,7 +46,14 @@ export default {
         content: 'https://xn--y8j1e4aj.com/ogp.png'
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }]
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
+      {
+        rel: 'stylesheet',
+        href:
+          'https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,500,700&display=swap'
+      }
+    ]
   },
   /*
    ** Customize the progress-bar color

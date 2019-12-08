@@ -8,6 +8,10 @@ html,
 body {
   min-height: 100vh;
   margin: 0;
+
+  * {
+    font-family: 'Noto Sans JP', sans-serif;
+  }
 }
 
 ::-webkit-scrollbar {
